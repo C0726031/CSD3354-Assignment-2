@@ -5,33 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DelegatesAndEvents
+//Harpreet Kaur(C0726031)
+//Simranjeet Kaur(C0727100)
 
 
-{ 
+{
     class Program
-{
-    static void Main(string[] args)
     {
-        DelegateExercises de = new DelegateExercises();
-        de.Method2();
-    }
-}
-public class DelegateExercises
-{
-    public delegate void MyDelegate();
-
+        static void Main(string[] args)
         
-        public void Method1()
-    {
-        Console.WriteLine("Method1");
-        Console.ReadLine();
-    }
-    public void Method2()
-    {
-        MyDelegate myDelegate = new MyDelegate(Method2);
-        myDelegate();
 
+            {
+                DelegateExercises The = new DelegateExercises();
+                The.Method2();
+            }
+
+        }
+        public class DelegateExercises
+        {
+            public delegate void MyDelegate();
+            void Method1()
+            {
+                Console.WriteLine("Method1");
+                Console.ReadLine();
+            }
+            public void Method2()
+            {
+                MyDelegate myDelegate = new MyDelegate(Method1);
+                myDelegate();
+            }
+        }
     }
-         
-}
-}
