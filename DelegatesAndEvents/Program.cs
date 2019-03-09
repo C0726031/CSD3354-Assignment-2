@@ -13,8 +13,8 @@ namespace DelegatesAndEvents
     {
         static void Main(string[] args)
         {
-            DelegateExercises de = new DelegateExercises();
-            de.Method3(10);
+            DelegateExercises the = new DelegateExercises();
+            the.Method3(10);
             Console.Read();
         }
     }
