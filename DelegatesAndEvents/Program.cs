@@ -17,6 +17,7 @@ namespace DelegatesAndEvents
             the.Method3();
             Console.Read();
         }
+
     }
     public delegate void MyDelegate();
     public class DelegateExercises
