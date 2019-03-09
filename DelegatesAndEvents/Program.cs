@@ -13,10 +13,11 @@ namespace DelegatesAndEvents
     {
         static void Main(string[] args)
         {
-            DelegateExercises The = new DelegateExercises();
-            The.Method2(50);
+            DelegateExercises the = new DelegateExercises();
+            the.Method1(70);
         }
     }
+
     public class DelegateExercises
     {
         public delegate void MyDelegate(int i);
@@ -29,7 +30,7 @@ namespace DelegatesAndEvents
         public void Method2(int i)
         {
             MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate(50);
+            myDelegate(70);
         }
     }
 }
