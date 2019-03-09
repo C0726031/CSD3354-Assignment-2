@@ -11,7 +11,7 @@ namespace DelegatesAndEvents
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             DelegateExercises the = new DelegateExercises();
             the.Method3(10);
@@ -24,16 +24,16 @@ namespace DelegatesAndEvents
         public delegate int MyDelegate(int i);
         public int Method1(int intMethod1)
         {
-            return intMethod1 * 2;
+            return intMethod1 * 4;
         }
         public int Method2(int intMethod1)
         {
-            return intMethod1 * 10;
+            return intMethod1 * 20;
         }
         public void Method4(MyDelegate myDelegate)
         {
-            int result = myDelegate(10);
-            System.Console.WriteLine(result);
+            for (int i = 1; i <= 5; i++)
+                System.Console.Write(myDelegate(i) + " ");
         }
         public void Method3(int intMethod3)
         {
